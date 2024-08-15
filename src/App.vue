@@ -17,11 +17,38 @@
       <li><img class="pessoa" src="../src/img/perfil.png" alt=""></li>
     </ul>
   </header>
-
+ 
   <section>
-    <h4>Oferecemos um atendimento personalizado e orçamentos</h4>
-    <p>No Sr. Elvis, estamos comprometidos em oferecer serviços de alta qualidade para atender todas as suas necessidades relacionadas a celulares. Nossa missão é proporcionar soluções rápidas e eficazes, garantindo a melhor experiência para você.</p>
+    <div class="padding">
+    <div class="container">
+  <div class="item cabecalho">Oferecemos um atendimento personalizado e orçamentos</div>
+
+  <div class="item menu-lateral"><p>No Sr. Elvis, estamos comprometidos em oferecer serviços de alta qualidade para atender todas as suas necessidades relacionadas a celulares. Nossa missão é proporcionar soluções rápidas e eficazes, garantindo a melhor experiência para você.</p>
+  </div>
+
+  <div class="item principal"><img src="../src/img/computador.png" alt="computador" height="380rem"></div>
+    </div>
+  </div>
+
   </section>
+ <section>
+  <div>
+
+    <h4>Disponibilizamos uma vasta gama de peças de reposição e acessórios para celulares.</h4>
+
+    <div class="imagens">
+  <div class="contem"><img src="../src/img/image.webp" alt="capa-amarela-iphone" height="300px"></div>
+  <div class="contem"><img src="../src/img/capas.webp" alt="capas-samsung" height="300px"></div>
+    </div>
+  </div>
+ </section>
+
+ <footer>
+  <div><p>Nossos serviços</p></div>
+  <div><p>Nossa empresa</p></div>
+  <div><p>Quem somos</p></div>
+ </footer>
+
 </template>
 
 <style scoped>
@@ -53,4 +80,80 @@
     width: 35px;
     height: 35px;
   }
+  /*.padding{
+    padding: 10rem;
+    background-color: #FFFF48;
+    margin-top: 1%;
+    display: grid;
+    grid-template-areas: "item-1""item-3""item-2";
+  }
+    */
+    .padding{
+      margin-top: 2%;
+      background-color: #FFFF48;
+      margin-bottom: 5%;
+    }
+  .container {
+    padding: 10rem;
+  display: grid;
+  grid-template: 100px 150px 100px / 1fr 1fr;
+  grid-template-areas:
+    "cabecalho cabecalho cabecalho"
+    "menu-lateral principal principal";
+   
+}
+
+.cabecalho {
+  grid-area: cabecalho;
+  text-align: center;
+  
+}
+
+.menu-lateral {
+  grid-area: menu-lateral;
+}
+
+.principal {
+  grid-area: principal;
+  text-align: right;
+  width: 600px;
+ 
+}
+.imagens{
+ display: grid;
+ align-items: center;
+  grid-template-columns: 45% 55%;
+  
+}
+
+.item {
+  font-size: 2rem;
+}
+
+.contem{
+  margin-top: 3%;
+  text-align: center;
+  font-size: 1.25em;
+  font-weight: normal;
+  
+}
+  h4{
+    font-size: 1.5rem;
+    text-align: center;
+    margin: 5%;
+  }
+  img{
+    border-radius: 20px;
+  }
+  footer{
+    padding: 6rem;
+    background-color: #000000;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    color: #8003FD;
+    margin-top: 4%;
+  }
+ 
 </style>
